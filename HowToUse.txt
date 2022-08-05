@@ -1,19 +1,25 @@
 This is a pre-made framework for your R project. It has everything set up for 
-you, and is ready to be linked to a github repository. It also has pre-made
-folders for organizing your files to the lab standard. 
-
+you, and has pre-made folders for organizing your files to the lab standard. 
+It is also ready to be linked to a github repository.
 
 How To Use: 
-  Download this from the github, and place a copy of it somewhere convenient.
-  Turn on version control (see below). DO NOT LINK TO A REPOSITORY.
-  When you want to make a new R project, make a copy of this folder, and then
-  name the copied folder to the name of the project, eg. "MyNewProject".
-  Then, use the "new project..." function in R, select existing directory, and
-  select the newly renamed directory ("MyNewProject") as the directory for it 
-  to use.
-  Link the new project to a github repository (see below).
+  This framework has two functions, one is for organization, and one is for
+  version control (linking to a github). Each is listed in its own section.
+  
+  DO NOT CLONE THIS FOLDER FROM THE GITHUB, DOWNLOAD IT AS A ZIP FILE. 
+  
+------Organization: -------
 
-
+  Download this from the github, and extract the contents. You'll be reusing 
+  it, so keep it somewhere convient, and keep it empty. 
+  When you want to make a new project, make a copy of the framework, and
+  name the copy the name of my project (eg. "myProject").
+  Then, use the "new project" function in RStudio (File>New Project...)
+  and select 'from an existing directory'. Then select the renamed copy of 
+  the framework as the directory. 
+  
+  Below is a list of the folders included, and what you should use them for. 
+  
 Folders: 
   /data -- This folder is for storing your raw data in (whatever you
   got from experiments, the field, downloads, ect.). This folder 
@@ -43,31 +49,62 @@ Folders:
     These are scripts which would only be relevant to the specific
     project they are in, and aren't going to be used anywhere else.
     
-    
-    
-Git:
+ 
+ 
+ 
+---------------Version Control And Connecting to Github: ----------
+
+Overview: 
+  Git is a way to track what changes have been made to a file over 
+  time (and also keep backups of old versions), among other things.
+  One useful feature is that it also makes a backup of the project 
+  in the cloud, so that it is accessible anywhere (or by other 
+  members of the lab). 
   
-  gitIgnore:
+  To connect to github, you must first turn on version control locally,
+  this must be done once immediately after downloading the file. 
+  This only has to be done ONCE, and then the directory with version
+  control can be copied as a framework. 
+  
+  The second step is to connect the project to a github repository. 
+  This must be done INDIVIDUALLY FOR EACH PROJECT. Make sure that 
+  your base framework that is being copied is NOT connected to an 
+  online repository. That connection will be inherited by any copies
+  of the folder.
+  
+    
+Improtant notes:
+  gitIgnore file:
   The .gitignore file is a list of any files you do NOT want uploaded
   to github. 
   This by default includes both the /data and /results directories
   (as they can be quite large). THIS MEANS THAT ANY DATA
   IN THESE FOLDERS IS NOT BEING BACKED UP TO THE CLOUD.
 
----- Turn On Version Control -----
+  Cloning from github: 
+  If this folder was cloned from the github (instead of downloading)
+  then it will still be linked to the framework's github. Make sure 
+  that this is not the case. If the framework is already linked, 
+  the steps will not work (and you might mess up the framework). 
+  If the version control symbol (green and red symbol) is not present
+  the framework was downloaded correctly. 
+
+---- Turn On Version Control-----
+
+This step can be skipped if you are copying a local version of the folder,
+where version control was already enabled. 
 
 In the top bar, go to Tools>Version Control>Project Setup. 
 In that window, make sure thatthe 'version control' dropdown is set to "git". 
 Restart RStudio. 
 Once you have done that, the green and red symbol should appear.
-  
-This step can be skipped if you are copying a local version of the folder,
-where version control was already enabled. 
+
+It is recommended that you rename the folder as "ProjectFrameworkPreGitted" 
+once you have done this, to show that git has been initialized locally.
+This framework is what can be copied to make new projects in the future.
 
 
-
-
----- To connect this to a Github repository --- 
+---- Connect to a Github repository ---- 
 
 First, make a repository on github (online). Ask for help if you don't know how.
 
@@ -83,16 +120,20 @@ Go into the Terminal (not console) and copy those lines into it, and
 then run it. The terminal tab is directly to the right of the console
 tab. 
 
+If this was successful, the Pull and Push (blue and green arrow) buttons
+should no longer be greyed out. 
 
 
 -----Troubleshooting Git Issues----
 
 Internal Version Control: 
-  This has already been setup to do internal version control; but it
-  requires git to be working on the computer. 
-  You should see a green and red symbol under the "profile" listing
-  in the top bar. If you do, you're good to go. 
   
+  This requires that git be installed on your computer. Note that
+  "git" is different from "github", including "github desktop".
+  
+  If Version Control is working, you should see a green and red symbol 
+  right below the "profile" listing in the top bar. If you do, you're 
+  good to go. 
   If not, make sure that you have git installed on your computer. 
   https://git-scm.com/download/win . If you have git installed, make
   sure that git is being used as the version control system. In the 
