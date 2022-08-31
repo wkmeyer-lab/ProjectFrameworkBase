@@ -1,1 +1,2 @@
 Store raw data in this folder. DO NOT ACCESS THIS WITH YOUR CODE.
+Treat as read only.
